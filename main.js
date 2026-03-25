@@ -15,7 +15,7 @@ const rusultH1 = document.getElementById('result');
 
 // const plusButton = document.getElementsByTagName('button')[0];
 // const plusButton = document.querySelectorAll('button')[0];
-const plusButton = document.getElementsByClassName('plusButton')[0];
+// const plusButton = document.getElementsByClassName('plusButton')[0];
 // const plusButton = document.querySelector('.plusButton');
 
 
@@ -26,7 +26,12 @@ let count = 0;
 //     resultH1.textContent = count;
 // });
 
-plusButton.onclick = () => {
+// plusButton.onclick = () => {
+//     count++;
+//     resultH1.textContent = count;
+// };
+
+function plus() {
     count++;
-    resultH1.textContent = count;
-};
+    rusultH1.textContent = count;
+}
