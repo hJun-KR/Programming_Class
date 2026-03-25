@@ -8,10 +8,16 @@
 // });
 
 // HTML -> JS
-const resultH1 = document.getElementsByTagName('h1')[0];
+// const resultH1 = document.getElementsByTagName('h1')[0];
 // const resultH1 = document.querySelectorAll('h1')[0];
-const plusButton = document.getElementsByTagName('button')[0];
+const rusultH1 = document.getElementById('result');
+// const resultH1 = document.querySelector('#result');
+
+// const plusButton = document.getElementsByTagName('button')[0];
 // const plusButton = document.querySelectorAll('button')[0];
+const plusButton = document.getElementsByClassName('plusButton')[0];
+// const plusButton = document.querySelector('.plusButton');
+
 
 let count = 0;
 
