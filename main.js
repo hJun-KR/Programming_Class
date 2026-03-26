@@ -31,6 +31,8 @@ let count = 0;
 //     resultH1.textContent = count;
 // };
 
+rusultH1.textContent = count;
+
 function plus() {
     count++;
     rusultH1.textContent = count;
