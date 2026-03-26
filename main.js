@@ -33,7 +33,7 @@ let count = 0;
 
 rusultH1.textContent = count;
 
-function plus() {
-    count++;
+function plus(number) {
+    count += number;
     rusultH1.textContent = count;
 }
