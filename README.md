@@ -4,5 +4,5 @@ Vanilla HTML, JavaScript
 
 ## React 시작 😜
 ```shell
-npm create cite@latest .
+npm create vite@latest .
 ```
