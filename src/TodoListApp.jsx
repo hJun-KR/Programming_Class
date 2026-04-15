@@ -2,6 +2,7 @@ import React from 'react'
 import'./todolist.css'
 import TodoItemEmpty from './components/TodoItemEmpty'
 import Button from './components/Button'
+import CheckBox from './components/CheckBox'
 
 function TodoListApp() {
   return (
@@ -15,8 +16,7 @@ function TodoListApp() {
 				<TodoItemEmpty />
 
 				<li className='todo__item todo__item--complete'>
-					<input type="checkbox" id="chk-1" className='todo__check' />
-					<label htmlFor="chk-1" className='todo__label'>지각하기</label>
+					<CheckBox id="1">지각하기</CheckBox>
 					<Button type="button" className='todo__button todo__button--edit'>✏️</Button>
 					<Button type="button" className='todo__button todo__button--delete'>❌</Button>
 				</li>				
