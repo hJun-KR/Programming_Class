@@ -2,10 +2,11 @@ import React from 'react'
 import CheckBox from './CheckBox'
 import Button from './Button'
 
-function TodoItem() {
+function TodoItem({ todo }) {
     return (
-        <li className='todo__item todo__item--complete'>
-            <CheckBox id="1">지각하기</CheckBox>
+        // todo.isCompleted가 참이면 "todo__item--complete" 아니면 ""
+        <li className={`todo__item ${todo.isCompleted ? " todo__item--complete" : ""}`}>
+            <CheckBox id={todo.id}>{todo.text}</CheckBox>
             <Button type="button" className='todo__button todo__button--edit'>✏️</Button>
             <Button type="button" className='todo__button todo__button--delete'>❌</Button>
         </li>
