@@ -34,12 +34,21 @@ function toggleTodo(id) {
 	)
 }
 
+function deleteTodo(id) {
+	// todos에서 하나씩 꺼내어 todo의 id가 id와 같지 않은 것들만 남기기
+	setTodos((todos) => 
+		todos.filter((todo) => 
+			todo.id !== id
+		)
+	)
+}
+
 	return (
 		<div className='todo'>
 			<TodoHeader />
 			<TodoAdder addTodo={addTodo}/>
 
-			<TodoList todos={todos} toggleTodo={toggleTodo}/>
+			<TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
 		</div>
 	)
 }
