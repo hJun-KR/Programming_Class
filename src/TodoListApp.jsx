@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './todolist.css'
 import TodoHeader from './components/TodoHeader'
 import TodoAdder from './components/TodoAdder'
@@ -12,8 +12,24 @@ class Todo {
 	}
 }
 
+const TODOS_STORAGE_KEY = "todos"
+
 function TodoListApp() {
-	const [todos, setTodos] = useState([]);
+
+	function initTodos() {
+		const savedTodos = localStorage.getItem(TODOS_STORAGE_KEY)
+
+		return savedTodos ? JSON.parse(savedTodos) : []
+	}
+
+	const [todos, setTodos] = useState(initTodos);
+
+	// todos 변경될 때, 저장하자, useEffect(명령어, [변할값])
+	useEffect(() => {
+		// localStorage에 todos 저장하자
+		localStorage.setItem(TODOS_STORAGE_KEY, JSON.stringify(todos))
+	}, [todos])
+
 
 	function addTodo(text) {
 		// 이전 todo 가져오기
