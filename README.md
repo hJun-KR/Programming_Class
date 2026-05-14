@@ -30,4 +30,5 @@ npm create vite@latest .
 - onKeyDown
 - LocalStorage, `useEffect(명령어, [변할값])`
 
-
+- `style={{}}`
+- HomeApp : state를 이용해서 다른 컴포넌트 표시하기
