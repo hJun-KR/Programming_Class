@@ -34,6 +34,7 @@ function TodoItem({ todo, ...rest }) {
                 <CheckBox
                     id={todo.id}
                     onChange={() => rest.toggleTodo(todo.id)}
+                    checked={todo.isCompleted}
                 >
                     {todo.text}
                 </CheckBox>
